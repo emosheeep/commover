@@ -1,0 +1,35 @@
+{
+  "name": "commover",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Batch remove unused @ts-expect-error comments, especially helpful when using with ts-migrate.",
+  "main": "./dist/index.js",
+  "keywords": ["ts-migrate", "typescript", "migration"],
+  "author": "emosheep@qq.com",
+  "license": "ISC",
+  "files": ["dist", "README.md"],
+  "bin": {
+    "commover": "./dist/index.js"
+  },
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "prepublish": "npm run build",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "format": "biome format . --write"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "zx": "^8.1.9"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.8.0",
+    "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.3.4",
+    "typescript": "^5.6.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": ["npx biome format ."]
+  }
+}
