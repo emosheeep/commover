@@ -2,12 +2,11 @@
   "name": "commover",
   "version": "1.0.0",
   "type": "module",
-  "description": "Batch remove unused @ts-expect-error comments, especially helpful when using with ts-migrate.",
-  "main": "./dist/index.js",
+  "description": "Batch remove unused @ts-expect-error directive comment lines, especially helpful when using with ts-migrate.",
   "keywords": ["ts-migrate", "typescript", "migration"],
   "author": "emosheep@qq.com",
-  "license": "ISC",
-  "files": ["dist", "README.md"],
+  "license": "MIT",
+  "files": ["dist"],
   "bin": {
     "commover": "./dist/index.js"
   },
@@ -31,5 +30,9 @@
   },
   "simple-git-hooks": {
     "pre-commit": ["npx biome format ."]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emosheeep/commover"
   }
 }
