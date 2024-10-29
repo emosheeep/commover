@@ -33,6 +33,13 @@ Compile ts, output a log file, and then call `commover` command with the file.
 tsc --noEmit > tsc.log # or tsc -b, output compile log to `tsc.log`
 commover tsc.log # will read `tsc.log` and handle parsed errors as need
 ```
+Then you'll get these logs
+
+```
+Removed line: src/tests/demo.ts:3
+Removed line: src/index.ts:3
+...
+```
 
 # Options
 
