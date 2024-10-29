@@ -5,8 +5,9 @@
   "description": "Batch remove unused @ts-expect-error directive comment lines, especially helpful when using with ts-migrate.",
   "keywords": ["ts-migrate", "typescript", "migration"],
   "author": "emosheep@qq.com",
+  "packageManager": "pnpm@9.12.3",
   "license": "MIT",
-  "files": ["dist"],
+  "files": ["dist", "CHANGELOG.md"],
   "bin": {
     "commover": "./dist/index.js"
   },
@@ -15,7 +16,9 @@
     "prepublish": "npm run build",
     "build": "tsup",
     "watch": "tsup --watch",
-    "format": "biome format . --write"
+    "format": "biome format . --write",
+    "changeset": "changeset",
+    "versions": "changeset version"
   },
   "dependencies": {
     "commander": "^12.1.0",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.27.9",
     "@types/node": "^22.8.0",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.4",
